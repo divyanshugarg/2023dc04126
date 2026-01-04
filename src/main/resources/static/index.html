@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CouTalk Agent - Test Data Generation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 CouTalk</h1>
+            <p class="subtitle"> A Virtual Agent for Synthetic Test Generation and Enhanced Developer Experience in Last-Mile Fulfillment Service</p>
+        </header>
+
+        <div class="chat-container">
+            <div id="messages" class="messages">
+                <!-- No initial welcome message -->
+            </div>
+            
+            <!-- Sample Queries - shown when no messages -->
+            <div id="sampleQueries" class="sample-queries">
+                <h3>Sample queries you can ask</h3>
+                <ul class="query-list">
+                    <li class="query-item" data-query="What is Batch generation process in warehouse operations?">What is Batch generation process in warehouse operations?</li>
+                    <li class="query-item" data-query="Can you create Synthetic test order using SKU Id 14-A11-2-421?">Can you create Synthetic test order using SKU Id 14-A11-2-421?</li>
+                    <li class="query-item" data-query="What is Inventory Allocation and why is it important before order pool?">What is Inventory Allocation and why is it important before order pool?</li>
+                    <li class="query-item" data-query="Tell me General Fulfillment Service components and their mapping">Tell me General Fulfillment Service components and their mapping</li>
+                    <li class="query-item" data-query="What is Rebatch Location, Station and Rebatch Station Slots?">What is Rebatch Location, Station and Rebatch Station Slots?</li>
+                </ul>
+            </div>
+
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput"
+                        rows="3"
+                    ></textarea>
+                    <button id="sendBtn" class="btn-send">Send</button>
+                </div>
+                <button id="newConversationBtn" class="btn-new">Start New Conversation</button>
+            </div>
+        </div>
+
+        <div id="status" class="status"></div>
+    </div>
+
+    <!-- Custom Modal for New Conversation -->
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Start New Conversation</h3>
+            <p>Do you want to delete the current conversation?</p>
+            <div class="modal-buttons">
+                <button id="modalCancel" class="btn-modal-cancel">Cancel</button>
+                <button id="modalNo" class="btn-modal-no">No</button>
+                <button id="modalYes" class="btn-modal-yes">Yes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

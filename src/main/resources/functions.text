@@ -1,0 +1,18 @@
+{
+  "name": "generate_test_order_only_on_request",
+  "description": "ONLY when Ask specifically, create an order number with a randomly assigned SKU ID in the format Floor > Zone > Aisle > Bay > Shelf, unless provided by the user.",
+  "strict": true,
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "sku_id": {
+        "type": "string",
+        "description": "SKU ID in the format Floor-Zone-Aisle-Bay-Shelf. If not provided, generate a random one, e.g., '14-A01-2-401'."
+      }
+    },
+    "required": [
+      "sku_id"
+    ],
+    "additionalProperties": false
+  }
+}
